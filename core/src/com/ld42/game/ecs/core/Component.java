@@ -1,4 +1,9 @@
 package com.ld42.game.ecs.core;
 
-public class Component {
+public abstract class Component extends GameObject {
+
+    public Component(Engine engine, String name) {
+        super(engine, name);
+    }
+
 }

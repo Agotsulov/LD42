@@ -2,18 +2,24 @@ package com.ld42.game.ecs.core;
 
 import java.util.Objects;
 
-public class GameObject {
+public abstract class GameObject {
 
-    private Engine engine;
+    protected Engine engine = null;
 
     private String name;
 
-    public Engine getEngine() {
-        return engine;
+    public GameObject(Engine engine, String name) {
+        setEngine(engine);
+        setName(name);
     }
 
+    public void create() {}
+
+    public void despose() {}
+
     public void setEngine(Engine engine) {
-        this.engine = engine;
+        if(this.engine == null)
+            this.engine = engine;
     }
 
     public String getName() {
