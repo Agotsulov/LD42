@@ -1,6 +1,6 @@
 android {
     buildToolsVersion "27.0.3"
-    compileSdkVersion 27
+    compileSdkVersion 23
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -18,8 +18,8 @@ android {
     }
     defaultConfig {
         applicationId "com.ld42.game"
-        minSdkVersion 9
-        targetSdkVersion 27
+        minSdkVersion 23
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
