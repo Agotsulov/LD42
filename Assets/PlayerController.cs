@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
@@ -43,8 +44,10 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         if (hp <= 0)
+        {
             Destroy(this.gameObject);
-
+            SceneManager.LoadScene(2, LoadSceneMode.Single);
+        }
         textHp.text = "HP:" + hp;
         textScore.text = "Score:" + score;
 
@@ -120,7 +123,7 @@ public class PlayerController : MonoBehaviour {
                     Destroy(go);
                 }
             }
-        } else if (Input.GetButtonDown("Fire2"))
+        }/* else if (Input.GetButtonDown("Fire2"))
         {
             List<GameObject> os = new List<GameObject>();
             //GameObject[] gos;
@@ -139,13 +142,10 @@ public class PlayerController : MonoBehaviour {
 
             if (os.Count >= needToBuild)
             {
-                Vector3 t = mousePos;
+                Vector2 t = mousePos2D;
                 t = Quaternion.Euler(0f, 0f, transform.position.y < mousePos.y ? angle : -angle) * t;
 
-
-
                 GameObject o = Instantiate(block, t, Quaternion.identity);
-                o.GetComponent<Rigidbody2D>().velocity = dir.normalized * speedOfThrow;
 
                 time = 0;
 
@@ -155,6 +155,6 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-
+        */
     }
 }
