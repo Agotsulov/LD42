@@ -21,8 +21,7 @@ public class PlayerController : MonoBehaviour {
     public GameObject block;
     public float distanceOfBuild = 3;
     public int needToBuild = 1;
-
-    public int hp = 3;
+    
     public float score = 0;
 
     public Text textHp;
@@ -43,12 +42,12 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (hp <= 0)
+        if (GetComponent<HP>().hp <= 0)
         {
             Destroy(this.gameObject);
             SceneManager.LoadScene(2, LoadSceneMode.Single);
         }
-        textHp.text = "HP:" + hp;
+        textHp.text = "HP:" + GetComponent<HP>().hp;
         textScore.text = "Score:" + score;
 
 
@@ -123,7 +122,7 @@ public class PlayerController : MonoBehaviour {
                     Destroy(go);
                 }
             }
-        }/* else if (Input.GetButtonDown("Fire2"))
+        } else if (Input.GetButtonDown("Fire2"))
         {
             List<GameObject> os = new List<GameObject>();
             //GameObject[] gos;
@@ -142,12 +141,10 @@ public class PlayerController : MonoBehaviour {
 
             if (os.Count >= needToBuild)
             {
-                Vector2 t = mousePos2D;
-                t = Quaternion.Euler(0f, 0f, transform.position.y < mousePos.y ? angle : -angle) * t;
-
+                Vector2 t = ((Vector2)this.transform.position) + (dir.normalized * 2);
+                
                 GameObject o = Instantiate(block, t, Quaternion.identity);
-
-                time = 0;
+               
 
                 foreach (GameObject go in os)
                 {
@@ -155,6 +152,6 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-        */
+        
     }
 }

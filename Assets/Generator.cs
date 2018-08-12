@@ -5,7 +5,7 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
 
-    public GameObject gameObject;
+    public GameObject go;
     public float delay = 1f;
 
     public float dy = 5f;
@@ -23,7 +23,7 @@ public class Generator : MonoBehaviour
             for (float x = -dx; x < dx; x += step)
             {
                 Vector3 v = new Vector3(x, y, 0);
-                Instantiate(gameObject, v, Quaternion.identity);
+                Instantiate(go, v, Quaternion.identity);
             }
         }
     }
@@ -41,7 +41,7 @@ public class Generator : MonoBehaviour
 
     public void Generate(){
         Vector3 v = new Vector3(Random.Range(-10.75f, 10.75f), Random.Range(-5f, 5f), 0);
-        GameObject o = Instantiate(gameObject, v, Quaternion.identity);
+        GameObject o = Instantiate(go, v, Quaternion.identity);
         
     }
 }

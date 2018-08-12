@@ -24,6 +24,11 @@ public class EnemyController : MonoBehaviour {
 
     void Update()
     {
+        if (GetComponent<HP>().hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
+
         Vector2 dir = player.transform.position - this.transform.position;
         rb.velocity = dir.normalized * speed;
 
@@ -48,7 +53,7 @@ public class EnemyController : MonoBehaviour {
     {
         if(collision.gameObject.name == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().hp--;
+            collision.gameObject.GetComponent<HP>().hp--;
             Destroy(this.gameObject);
         }
     }
