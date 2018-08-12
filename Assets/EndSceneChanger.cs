@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class EndSceneChanger : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetButtonDown("Fire1"))
+    public InputField field;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            StartSceneChanger.currentName = field.text;
+            PlayerPrefs.SetString("NewPlayer", StartSceneChanger.currentName);
+            PlayerPrefs.SetInt("NewScore", PlayerController.score);
+            PlayerPrefs.Save();
+            //Debug.Log(StartSceneChanger.currentName);
             SceneManager.LoadScene(0);
-	}
+        }
+    }
 }

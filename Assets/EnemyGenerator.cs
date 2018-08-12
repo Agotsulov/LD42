@@ -33,7 +33,7 @@ public class EnemyGenerator : MonoBehaviour
     {
         int random = Random.Range(0, 3);
 
-        d = delay - player.GetComponent<PlayerController>().score * 0.01f;
+        d = delay - PlayerController.score * 0.01f;
         elapsed += Time.deltaTime;
         if (elapsed >= delay)
         {
@@ -104,7 +104,6 @@ public class EnemyGenerator : MonoBehaviour
 
         Vector3 v = new Vector3(Random.Range(sizeX, sizeX + 1) * dX, Random.Range(sizeY, sizeY) * dY, 0);
 
-        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         GameObject o = Instantiate(bigEnemy, v, Quaternion.identity);
         o.GetComponent<BigEnemyController>().player = this.player;
         //o.GetComponent<BigEnemyController>().block = this.block;

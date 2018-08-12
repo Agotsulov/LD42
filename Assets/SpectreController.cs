@@ -35,6 +35,8 @@ public class SpectreController : MonoBehaviour {
         Vector2 dir = target - (Vector2) this.transform.position;
         rb.velocity = dir.normalized * speed;
 
+        this.gameObject.transform.Rotate(new Vector3(0, 0, 1), 5);
+
         if (dir.sqrMagnitude < generDir)
             Generate();
 

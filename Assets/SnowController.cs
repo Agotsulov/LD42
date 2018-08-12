@@ -20,7 +20,7 @@ public class SnowController : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            player.GetComponent<PlayerController>().score += 10;
+            PlayerController.score += 10;
             collision.gameObject.GetComponent<HP>().hp--;
             Destroy(this.gameObject);
         }    

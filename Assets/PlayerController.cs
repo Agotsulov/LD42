@@ -22,7 +22,8 @@ public class PlayerController : MonoBehaviour {
     public float distanceOfBuild = 3;
     public int needToBuild = 1;
     
-    public float score = 0;
+    public static int score = 0;
+    
 
     public Text textHp;
     public Text textScore;

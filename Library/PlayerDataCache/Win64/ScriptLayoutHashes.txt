@@ -2,8 +2,9 @@ WindowsStandalone
 PlayerPath?
 D:/Workspace/Unity-LD42/r/Unity-LD42.exe
 SceneListBegin?
+Assets/Scenes/StartScene.unity
 Assets/Scenes/MainScene.unity
-Assets/Scenes/Menu.unity
+Assets/Scenes/EndScene.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 7b803eb2910e9b4cd5e521ae07b9f7d6 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -19,12 +20,13 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 0ddb2c46096a1e59e0dce07886ce4769 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-c779153547b12cba4660fc06dcc1c665 Assembly-CSharp.dll:.EnemyGenerator
+f4ba4a47614ae4642b32d5bf00019c58 Assembly-CSharp.dll:.EnemyGenerator
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 5b9b2f59726c6ff8c5be027e767006cf Assembly-CSharp.dll:.SnowController
 b14b4630cc47b6e9ea8a644551a6a8cc Unity.TextMeshPro.dll:TMPro.TMP_Text
-a7e49ddfc42dc867eb34b395752ddfd8 Assembly-CSharp.dll:.PlayerController
-337e94e8b32e5ce6108aeefd33bfee62 Assembly-CSharp.dll:.BlockController
+9891f0096ff618280e230a9c14a537ae Assembly-CSharp.dll:.PlayerController
+4b3ac08fa387cdaca4fd959e8df74874 Assembly-CSharp.dll:.Container
+0adf227ee517739b487c7135449bac15 Assembly-CSharp.dll:.BlockController
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 486cd95c82d8305219c352c06b776e1f UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 da2091a04d360891450faf16cdf621f1 UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -120,12 +122,15 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
+288553c8a5873e6f2ec63323c1de3e75 Assembly-CSharp.dll:.EndSceneChanger
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 486cd95c82d8305219c352c06b776e1f UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
+756dfc687f474cea09fd45b03291e283 Assembly-CSharp.dll:.SpectreController
+14dc141be7269dbadd0087d96d152b15 Assembly-CSharp.dll:.HP
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -168,10 +173,10 @@ aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5b62217e4237483afe501abd99423ff7 Assembly-CSharp.dll:.ChangeCursor
 fc3bb21163130e57f45890456deca415 Assembly-CSharp.dll:.EnemyController
 e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
-e69660b2a54cc9f83dd0544b0f748d1f Assembly-CSharp.dll:.Generator
+1bcf3ec9b5e71b774c3f742ec06feb57 Assembly-CSharp.dll:.Generator
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
+4045110c1145ae1233622f588069a228 Assembly-CSharp.dll:.BigEnemyController
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 d3baf945a28bf6b4a4706c8193e7459e Assembly-CSharp.dll:.LookAtMouse
-b1d96be441de057924667dcb1c98a4d7 Assembly-CSharp.dll:.test
-6dc357694f9fd62cf8914d6c87416d8d Assembly-CSharp.dll:.Container
+b241c0febc93d681a31849321ace17a8 Assembly-CSharp.dll:.StartSceneChanger
