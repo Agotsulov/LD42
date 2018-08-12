@@ -5087,7 +5087,7 @@ Prefab:
     - target: {fileID: 50066468475561650, guid: e4dcaabe34d5ad44a8d0dfde93cd8ef5,
         type: 2}
       propertyPath: m_Simulated
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50066468475561650, guid: e4dcaabe34d5ad44a8d0dfde93cd8ef5,
         type: 2}
@@ -5586,7 +5586,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 4aedd1df2395e8a4984f712d59fccae1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -26,9 +26,9 @@ public class BlockController : MonoBehaviour {
 
     void Generate()
     {
-        for (float y = this.gameObject.transform.position.x  - dy; y < dy; y += step)
+        for (float y = this.gameObject.transform.position.y  - dy; y < this.gameObject.transform.position.y + dy; y += step)
         {
-            for (float x = this.gameObject.transform.position.x - dx; x < dx; x += step)
+            for (float x = this.gameObject.transform.position.x - dx; x < this.gameObject.transform.position.x + dx; x += step)
             {
                 Vector3 v = new Vector3(x, y, 0);
                 Instantiate(snow, v, Quaternion.identity);

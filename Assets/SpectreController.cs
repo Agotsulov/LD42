@@ -7,10 +7,14 @@ public class SpectreController : MonoBehaviour {
     public float speed = 6;
 
     public GameObject player;
-    
+    public GameObject snow;
+
     public float delay = 5f;
 
     float elapsed = 0f;
+
+    public float size = 0.2f;
+    public float generDir = 0.2f;
 
     Rigidbody2D rb;
     Vector2 target;
@@ -31,6 +35,8 @@ public class SpectreController : MonoBehaviour {
         Vector2 dir = target - (Vector2) this.transform.position;
         rb.velocity = dir.normalized * speed;
 
+        if (dir.sqrMagnitude < generDir)
+            Generate();
 
         elapsed += Time.deltaTime;
         if (elapsed >= delay)
@@ -39,6 +45,12 @@ public class SpectreController : MonoBehaviour {
             FindTarget();
         }
     }
+    public void Generate()
+    {
+        Vector3 v = this.gameObject.transform.position + new Vector3(Random.Range(-size, size), Random.Range(-size, size), 0);
+        GameObject o = Instantiate(snow, v, Quaternion.identity);
+    }
+
 
     void FindTarget()
     {

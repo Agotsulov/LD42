@@ -107,9 +107,6 @@ public class PlayerController : MonoBehaviour {
                 }
             }
 
-
-            
-
             if (os.Count >= needToThrow)
             {
                 GameObject o = Instantiate(snowThrowable, this.transform.position, Quaternion.identity);
